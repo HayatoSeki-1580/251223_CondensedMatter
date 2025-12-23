@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物性物理 有名物質俯瞰マップ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f1f5f9;
+            color: #0f172a;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.7;
+            word-break: break-word;
+        }
+        .container-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .header-title {
+            background: linear-gradient(90deg, #1e3a8a, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        .section-header {
+            background-color: #f8fafc;
+            padding: 1.5rem 2rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .section-content {
+            padding: 2rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 0.15rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-left: 0.75rem;
+            color: #475569;
+            border: 1px solid #cbd5e1;
+            vertical-align: middle;
+            line-height: 1.2;
+        }
+        .material-block {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .material-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        /* 化学式の間に余白を入れないよう display: block に修正 */
+        .material-name {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #1d4ed8;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        /* 下付き文字の余白と位置を再定義 */
+        sub {
+            font-size: 70%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+            bottom: -0.2em;
+            margin-left: 0; 
+            margin-right: 0.05em;
+        }
+        .desc-main {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            color: #334155;
+            text-align: justify;
+        }
+        .physics-deep {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            background: #fdf2f8;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #db2777;
+        }
+        .professor-badge {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 0.75rem;
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid #a7f3d0;
+            line-height: 1;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .glossary-card {
+            background: #1e293b;
+            color: #cbd5e1;
+            padding: 1.25rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        .glossary-term {
+            color: #fbbf24;
+            font-weight: 800;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-wrapper">
+        <header class="mb-16 text-center">
+            <h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tighter header-title">物性物理 有名物質俯瞰マップ</h1>
+            <p class="text-xl text-slate-500 max-w-3xl mx-auto font-medium">
+                量子相関の極限、トポロジーの数理、そして非自明な超伝導秩序。<br>日本の研究者がリードする現代物理学の最前線を網羅する。
+            </p>
+        </header>
+
+        <!-- 1. 比率・組成と強相関・超伝導 -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>1. 量子臨界性と非従来型超伝導</h2>
+            </div>
+            <div class="section-content">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3>強磁性超伝導 (FM-SC)</h3>
+                        <div class="material-block">
+                            <div class="material-name">URhGe / UCoGe / UGe<sub>2</sub><span class="tag">1:1:1 / 1:2</span></div>
+                            <p class="desc-main">
+                                強磁性秩序と超伝導が同一の電子（f電子）によって担われ、ミクロに共存する稀有な系。通常、磁場は超伝導を破壊するが、これらウラン系では磁気秩序そのものが超伝導対形成の「糊」となる。
+                            </p>
+                            <div class="physics-deep">
+                                <b>物理学的解釈：</b> 強磁性量子臨界点近傍での「縦スピンゆらぎ」が引力となり、スピン三重項対（S=1）が形成される。URhGeではb軸方向に強い磁場を印加することで強磁性ゆらぎが極大化し、超伝導が復活する「再入超伝導」現象が実証されている。
+                            </div>
+                            <span class="professor-badge">青木 大 (東北大) / 石田 憲二 (京大) / 佐藤 憲昭 (名大名誉)</span>
+                        </div>
+
+                        <div class="material-block">
+                            <div class="material-name">UTe<sub>2</sub><span class="tag">1:2</span></div>
+                            <p class="desc-main">
+                                2019年に発見された重い電子系超伝導。非磁性だが強磁性量子臨界点に極めて近く、カイラルp波（三重項）のトポロジカル超伝導候補として世界的に注目。
+                            </p>
+                            <div class="physics-deep">
+                                <b>物理学的解釈：</b> 近藤効果によるc-f混成の結果、自由電子の数百倍の有効質量を持つ準粒子が形成される。60テスラを超える強磁場下でも超伝導相が安定であり、マヨラナフェルミオンの存在を示唆する実験結果も報告されている。
+                            </div>
+                            <span class="professor-badge">青木 大 (東北大) / 石田 憲二 (京大) / 徳永 陽 (JAEA)</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>鉄系超伝導 (Iron-based SC)</h3>
+                        <div class="material-block">
+                            <div class="material-name">LaFeAsO<sub>1-x</sub>F<sub>x</sub> / BaFe<sub>2</sub>As<sub>2</sub><span class="tag">1111 / 122</span></div>
+                            <p class="desc-main">
+                                2008年に日本で発見された高温超伝導体。FeAs層における多軌道性が物理の核心であり、スピンゆらぎと軌道ゆらぎの競合によって対形成が行われる。
+                            </p>
+                            <div class="physics-deep">
+                                <b>物理学的解釈：</b> 対称性はs±波が有力。異なるフェルミ面間で超伝導ギャップの符号が反転する非自明なs波状態である。中性子散乱による共鳴ピークの観測が、この符号反転の直接的な証拠として提示されている。
+                            </div>
+                            <span class="professor-badge">細野 秀雄 (東工大) / 廣井 善二 (東大) / 芝内 孝禎 (東大)</span>
+                        </div>
+
+                        <div class="material-block">
+                            <div class="material-name">FeSe<span class="tag">1:1</span></div>
+                            <p class="desc-main">
+                                鉄系の中で最も単純な構造だが、物理は最も複雑。長距離磁気秩序を欠く一方で、電子系が回転対称性を破る「ネマティック相」を示す。
+                            </p>
+                            <div class="physics-deep">
+                                <b>物理学的解釈：</b> 軌道自由度が主役となる「軌道ネマティック秩序」が超伝導と密接に絡み合う。単層膜化（FeSe/SrTiO<sub>3</sub>）により転移温度が劇的に上昇（最高100K超の報告あり）するなど、界面物理の舞台でもある。
+                            </div>
+                            <span class="professor-badge">松田 祐司 (京大) / 芝内 孝禎 (東大)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. トポロジーと幾何学的磁性 -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>2. 実空間・運動量空間の幾何学</h2>
+            </div>
+            <div class="section-content">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3>カゴメ格子とベリー曲率</h3>
+                        <div class="material-block">
+                            <div class="material-name">Mn<sub>3</sub>Sn<span class="tag">カゴメ格子</span></div>
+                            <p class="desc-main">
+                                磁気モーメントが正三角形の頂点で120度ずつ向き合う「非共線的反強磁性」を室温で維持する。マクロな磁化をほとんど持たないため、漏れ磁場による干渉が少ない。
+                            </p>
+                            <div class="physics-deep">
+                                <b>物理学的解釈：</b> 反強磁性構造によって生じる実空間のワイル点（Weyl Nodes）が、運動量空間に強力なベリー曲率を発生させる。これが「仮想磁場」として作用し、室温での巨大異常ホール効果や異常ネルンスト効果を誘発する。
+                            </div>
+                            <span class="professor-badge">中辻 知 (東大) / 大谷 義近 (理研/東大)</span>
+                        </div>
+
+                        <div class="material-block">
+                            <div class="material-name">MnSi<span class="tag">スカイミオン</span></div>
+                            <p class="desc-main">
+                                結晶の反転対称性の欠如（B20構造）により、スピンの渦巻き構造である「磁気スカイミオン」が安定化する代表的物質。
+                            </p>
+                            <div class="physics-deep">
+                                <b>物理学的解釈：</b> Dzyaloshinskii-Moriya（DM）相互作用が起源。スカイミオンはトポロジカルに保護された量子化磁束のような性質を持ち、極めて微弱な電流（従来の10万分の1）での駆動が可能なため、究極の省エネ情報デバイスとして期待されている。
+                            </div>
+                            <span class="professor-badge">十倉 好紀 (東大/理研) / 加倉井 和久 (JAEA)</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>トポロジカル相と界面物性</h3>
+                        <div class="material-block">
+                            <div class="material-name">Bi<sub>2</sub>Se<sub>3</sub> / (Bi,Sb)<sub>2</sub>Te<sub>3</sub><span class="tag">2:3系</span></div>
+                            <p class="desc-main">
+                                強いスピン軌道相互作用によりバンド構造が反転した「トポロジカル絶縁体」。表面にはスピンと運動量が直交する「ヘリカル・ディラック・コーン」が現れる。
+                            </p>
+                            <div class="physics-deep">
+                                <b>物理学的解釈：</b> 表面の伝導電子は時間反転対称性によって保護されており、非磁性不純物による後方散乱が禁じられている。これを磁性体と接合させることで、量子異常ホール効果などの非自明な現象が発現する。
+                            </div>
+                            <span class="professor-badge">安藤 陽一 (大阪大/ケルン大) / 金道 浩一 (東大)</span>
+                        </div>
+
+                        <div class="material-block">
+                            <div class="material-name">Sr<sub>2</sub>RuO<sub>4</sub> (SRO)<span class="tag">2:1:4系</span></div>
+                            <p class="desc-main">
+                                ルテニウム酸化物の層状ペロブスカイト。純度が極めて高い単結晶において超伝導が発現し、スピン三重項の有力候補として20年以上君臨している。
+                            </p>
+                            <div class="physics-deep">
+                                <b>最新論争：</b> 最近のNMRナイトシフト実験において、超伝導転移に伴うスピン磁化率の減少が再確認されたため、従来のカイラルp波説が揺らいでいる。現在、スピン一重項d波説や他の三重項状態の可能性を含めた国際的な再検証の渦中にある。
+                            </div>
+                            <span class="professor-badge">前野 悦輝 (京大) / 石田 憲二 (京大)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 強相関電子系と分極制御 -->
+        <div class="section-card">
+            <div class="section-header">
+                <h2>3. 対称性の自発的破れと多体効果</h2>
+            </div>
+            <div class="section-content">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3>モット絶縁体と量子ゆらぎ</h3>
+                        <div class="material-block">
+                            <div class="material-name">V<sub>2</sub>O<sub>3</sub> / κ-(BEDT-TTF)<sub>2</sub>X<span class="tag">強相関</span></div>
+                            <p class="desc-main">
+                                電子同士のクーロン排斥力（U）がバンド幅（W）を上回り、本来金属であるはずが絶縁体化する現象。強相関物性の原点。
+                            </p>
+                            <div class="physics-deep">
+                                <b>物理学的解釈：</b> 温度、圧力、キャリアドープによりU/Wを制御することで、金属・絶縁体相転移（モット転移）が引き起こされる。有機導体（κ体）では、転移点近傍でスピン液体状態や超伝導、強誘電性が複雑に絡み合う。
+                            </div>
+                            <span class="professor-badge">今田 正俊 (東大名誉) / 鹿野田 一司 (東大) / 加藤 礼三 (理研)</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>誘電・焦電・圧電材料</h3>
+                        <div class="material-block">
+                            <div class="material-name">Pb(Zr,Ti)O<sub>3</sub> (PZT) / BaTiO<sub>3</sub><span class="tag">ペロブスカイト</span></div>
+                            <p class="desc-main">
+                                構造的な反転対称性の欠如により自発分極が生じる。PZTは、圧電定数が極めて大きく、世界中のセンサ・アクチュエータの基盤材料。
+                            </p>
+                            <div class="physics-deep">
+                                <b>物理学的解釈：</b> ソフトモードの凍結による相転移。特に菱面体晶と正方晶の相境界（MPB）では、分極ベクトルが容易に回転できるため、外部応力や電場に対して巨大な応答を示す。物性的にはナノスケールの分域（ドメイン）構造の制御が鍵。
+                            </div>
+                            <span class="professor-badge">内野 研二 (ペンシルバニア大/上智大)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 専門用語注釈 -->
+        <div class="section-card bg-slate-900 text-slate-300">
+            <div class="section-header bg-slate-800 border-slate-700">
+                <h2 class="text-white">専門用語・注釈 (Glossary)</h2>
+            </div>
+            <div class="section-content">
+                <div class="glossary-grid">
+                    <div class="glossary-card">
+                        <span class="glossary-term">量子臨界点 (QCP)</span>
+                        絶対零度において磁気相転移などの相転移温度が0Kに達する点。量子力学的なゆらぎが極大化し、非従来型超伝導の起源となる。
+                    </div>
+                    <div class="glossary-card">
+                        <span class="glossary-term">スピン三重項 (Spin Triplet)</span>
+                        電子ペアのスピンが揃った状態（S=1）。反対称な軌道関数を要求するため、p波やf波といった非自明な超伝導ギャップを持つ。
+                    </div>
+                    <div class="glossary-card">
+                        <span class="glossary-term">ベリー曲率 (Berry Curvature)</span>
+                        波動関数の幾何学的位相から導かれる量。運動量空間における「磁場」として働き、外部磁場なしの異常ホール効果を支配する。
+                    </div>
+                    <div class="glossary-card">
+                        <span class="glossary-term">ネマティック秩序 (Nematic Order)</span>
+                        並進対称性を保ちながら、x軸方向とy軸方向が等価でなくなるような回転対称性の自発的破れ。電子液晶状態とも呼ばれる。
+                    </div>
+                    <div class="glossary-card">
+                        <span class="glossary-term">重い電子系 (Heavy Fermion)</span>
+                        局在性の強いf電子と伝導電子が混成し、低温で電子の有効質量が自由電子の100～1000倍程度まで増大する多体系。
+                    </div>
+                    <div class="glossary-card">
+                        <span class="glossary-term">ナイトシフト (Knight Shift)</span>
+                        NMR測定における共鳴周波数のズレ。電子系のスピン磁化率を直接反映するため、超伝導対の状態判定に必須のデータ。
+                    </div>
+                    <div class="glossary-card">
+                        <span class="glossary-term">Dzyaloshinskii-Moriya (DM) 相互作用</span>
+                        反転対称性がない系でスピンをひねらせようとする非対称交換相互作用。スカイミオン形成の原動力。
+                    </div>
+                    <div class="glossary-card">
+                        <span class="glossary-term">多極子秩序 (Multipole Order)</span>
+                        スピンの向きだけでなく、電子の軌道の形や電荷分布の歪みが整列する秩序。通常の磁気測定では見えにくいため「隠れた秩序」と呼ばれる。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-16 text-center text-slate-500 text-sm pb-10 border-t border-slate-200 pt-8">
+            <p class="font-bold">物性物理学：実験と理論の共鳴</p>
+            <p class="mt-2 opacity-75">放射光施設 Spring-8 / 中性子散乱施設 J-PARC / 強磁性・極低温測定技術</p>
+            <p class="mt-4">© 2025 物性物理ナビゲーション - Advanced Materials Map</p>
+        </footer>
+    </div>
+
+</body>
+</html>
